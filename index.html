@@ -196,6 +196,20 @@ section{
     gap:40px;
 }
 
+.contact img{
+    width:100%;
+    max-width:300px;
+    height:auto;
+    display:block;
+    margin:auto;
+    border-radius:10px;
+}
+
+.contact-grid img{
+    width:100%;
+    border-radius:10px;
+}
+
 form input,
 form textarea{
     width:100%;
@@ -251,28 +265,38 @@ footer{
 @media(max-width:768px){
 
 .hero h1{
-    font-size:36px;
-}
-
-.about,
-.contact-grid{
-    grid-template-columns:1fr;
-
-}
-
-@media(max-width:768px){
-
-header{
-    background-position:75% center;
-    background-attachment:scroll;
-}
-
-.hero h1{
     font-size:32px;
 }
 
 .hero p{
     font-size:18px;
+}
+
+.about,
+.contact-grid{
+    grid-template-columns:1fr;
+}
+
+.products{
+    grid-template-columns:1fr;
+}
+
+.gallery{
+    grid-template-columns:1fr;
+}
+
+.steps{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.step img{
+    height:180px;
+}
+
+header{
+    background-position:center;
+    background-attachment:scroll;
+    min-height:70vh;
 }
 
 }
