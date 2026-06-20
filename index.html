@@ -28,6 +28,22 @@ body{
     margin:auto;
 }
 
+.hero{
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.hero-top{
+    padding-top:20px;
+}
+
+.hero-bottom{
+    text-align:center;
+    padding-bottom:40px;
+}
+
 header{
     background-image:
         linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.25)),
@@ -285,7 +301,8 @@ footer{
 .hero h1{
     font-size:24px;
     line-height:1.1;
-    margin-bottom:12px;
+    margin-top:10px;
+    margin-bottom:10px;
 }
 
 .hero p{
@@ -315,10 +332,10 @@ footer{
 }
 
 header{
-    background-position:center;
+    background-position:center top;
     background-attachment:scroll;
-    min-height:80vh;
-    padding-top:40px;
+    min-height:100vh;
+    padding-top:0;
 }
 
 }
@@ -331,14 +348,18 @@ header{
 <header>
 
 <div class="container hero">
-<div>
-<h1>Вибролитая тротуарная плитка в Калининграде</h1>
-<p>Изготовление, продажа и доставка напрямую с производства</p>
 
+<div class="hero-top">
+<h1>Тротуарная плитка в Калининграде</h1>
+<p>Изготовление, продажа и доставка напрямую с производства.</p>
+</div>
+
+<div class="hero-bottom">
 <a href="tel:+79031910300" class="call-btn">Позвонить сейчас</a>
+</div>
 
 </div>
-</div>
+
 </header>
 
 <section>
