@@ -8,34 +8,6 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-@media(max-width:768px){
-
-header{
-    background:none;
-    min-height:auto;
-    padding-bottom:40px;
-}
-
-.hero-mobile{
-    display:block;
-    width:100%;
-    height:auto;
-}
-
-.hero{
-    padding-top:30px;
-}
-
-.hero h1{
-    font-size:32px;
-}
-
-.hero p{
-    font-size:18px;
-}
-
-}
-
 <style>
 *{
     margin:0;
@@ -69,10 +41,6 @@ header{
     display:flex;
     align-items:center;
     text-align:center;
-}
-
-.hero-mobile{
-    display:none;
 }
 
 .hero h1{
@@ -291,14 +259,30 @@ footer{
     grid-template-columns:1fr;
 
 }
+
+@media(max-width:768px){
+
+header{
+    background-position:75% center;
+    background-attachment:scroll;
+}
+
+.hero h1{
+    font-size:32px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-
-<img src="Kant.jpg" class="hero-mobile">
 
 <div class="container hero">
 <div>
