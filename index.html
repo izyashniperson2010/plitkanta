@@ -372,51 +372,6 @@ header{
 </style>
 </head>
 
-<script>
-
-document.querySelectorAll('.choice-item').forEach(function(item){
-
-    item.addEventListener('click', function(){
-
-        let all =
-        document.querySelectorAll('.choice-item');
-
-        all.forEach(function(el){
-
-            el.classList.remove('active');
-            el.classList.remove('good');
-
-        });
-
-        this.classList.add('active');
-
-        all.forEach(function(el){
-
-            if(el !== item){
-
-                el.classList.add('good');
-
-            }
-
-        });
-
-        setTimeout(function(){
-
-            all.forEach(function(el){
-
-                el.classList.remove('active');
-                el.classList.remove('good');
-
-            });
-
-        },5000);
-
-    });
-
-});
-
-</script>
-
 <body>
 
 <header>
@@ -659,6 +614,46 @@ window.addEventListener('DOMContentLoaded', function(){
         lightbox.classList.remove('active');
 
     });
+	
+	document.querySelectorAll('.choice-item').forEach(function(item){
+
+    item.addEventListener('click', function(){
+
+        let all = document.querySelectorAll('.choice-item');
+
+        all.forEach(function(el){
+
+            el.classList.remove('active');
+            el.classList.remove('good');
+
+        });
+
+        this.classList.add('active');
+
+        all.forEach(function(el){
+
+            if(el !== item){
+
+                el.classList.add('good');
+
+            }
+
+        });
+
+        setTimeout(function(){
+
+            all.forEach(function(el){
+
+                el.classList.remove('active');
+                el.classList.remove('good');
+
+            });
+
+        },5000);
+
+    });
+
+});
 
 });
 </script>
