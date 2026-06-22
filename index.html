@@ -342,8 +342,80 @@ header{
 
 }
 
+.choice-box{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    margin:40px 0;
+}
+
+.choice-item{
+    font-size:34px;
+    font-weight:700;
+    color:#333;
+    cursor:pointer;
+    transition:.4s;
+}
+
+.choice-item.active{
+    color:#c62828;
+    text-decoration:line-through;
+    transform:scale(0.8);
+}
+
+.choice-item.good{
+    color:#2e7d32;
+    transform:scale(1.15);
+}
+
 </style>
 </head>
+
+<script>
+
+document.querySelectorAll('.choice-item').forEach(function(item){
+
+    item.addEventListener('click', function(){
+
+        let all =
+        document.querySelectorAll('.choice-item');
+
+        all.forEach(function(el){
+
+            el.classList.remove('active');
+            el.classList.remove('good');
+
+        });
+
+        this.classList.add('active');
+
+        all.forEach(function(el){
+
+            if(el !== item){
+
+                el.classList.add('good');
+
+            }
+
+        });
+
+        setTimeout(function(){
+
+            all.forEach(function(el){
+
+                el.classList.remove('active');
+                el.classList.remove('good');
+
+            });
+
+        },5000);
+
+    });
+
+});
+
+</script>
 
 <body>
 
@@ -405,10 +477,22 @@ header{
 
 </p>
 
-<div class="features">
-<div class="feature">Камерная сушка</div>
-<div class="feature">Гидратация цемента под защитной плёнкой</div>
-<div class="feature">Контроль качества на каждом этапе производства</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2 class="section-title">Выберите ненужное</h2>
+
+<div class="choice-box">
+
+<span class="choice-item">Недорого</span>
+
+<span class="choice-item">Качественно</span>
+
+<span class="choice-item">Быстро</span>
+
 </div>
 
 </div>
