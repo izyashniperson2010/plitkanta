@@ -386,6 +386,30 @@ header{
     transform:scale(1.1);
 }
 
+.choice-text{
+    text-align:center;
+    font-size:22px;
+    margin:10px 0;
+    font-weight:500;
+}
+
+.plitkanta-btn{
+    display:table;
+    margin:15px auto;
+    padding:12px 30px;
+    background:#8a8a8a;
+    color:white;
+    font-size:24px;
+    font-weight:700;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.plitkanta-btn:hover{
+    background:#6f6f6f;
+}
+
 </style>
 </head>
 
@@ -466,6 +490,18 @@ header{
 <span class="choice-item">Быстро</span>
 
 </div>
+
+<p class="choice-text">
+Обычно приходится выбирать...
+</p>
+
+<div class="plitkanta-btn">
+ПЛИТКАНТА
+</div>
+
+<p class="choice-text">
+— выбор очевиден!
+</p>
 
 </div>
 </section>
@@ -686,6 +722,32 @@ window.addEventListener('DOMContentLoaded', function(){
     });
 
 });
+
+const plitkantaBtn = document.querySelector('.plitkanta-btn');
+
+if(plitkantaBtn){
+
+    plitkantaBtn.addEventListener('click', function(){
+
+        document.querySelectorAll('.choice-item').forEach(function(item){
+
+            item.classList.add('good');
+
+        });
+
+        setTimeout(function(){
+
+            document.querySelectorAll('.choice-item').forEach(function(item){
+
+                item.classList.remove('good');
+
+            });
+
+        }, 2500);
+
+    });
+
+}
 
 });
 </script>
